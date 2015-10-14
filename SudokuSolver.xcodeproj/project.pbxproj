@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 47;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,9 @@
 		EB1A89441B0824770040C20B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB1A89431B0824770040C20B /* Images.xcassets */; };
 		EB1A89471B0824770040C20B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB1A89451B0824770040C20B /* Main.storyboard */; };
 		EB1A89531B0824770040C20B /* SudokuSolverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1A89521B0824770040C20B /* SudokuSolverTests.swift */; };
+		EB79D4941B08260A0006E0A1 /* SudokuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB79D4931B08260A0006E0A1 /* SudokuCell.swift */; };
+		EB79D4971B0826220006E0A1 /* Sudoku3x3Cells.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB79D4951B0826220006E0A1 /* Sudoku3x3Cells.swift */; };
+		EB79D4981B0826220006E0A1 /* Sudoku9x9Cells.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB79D4961B0826220006E0A1 /* Sudoku9x9Cells.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,9 @@
 		EB1A894C1B0824770040C20B /* SudokuSolverTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SudokuSolverTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB1A89511B0824770040C20B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB1A89521B0824770040C20B /* SudokuSolverTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SudokuSolverTests.swift; sourceTree = "<group>"; };
+		EB79D4931B08260A0006E0A1 /* SudokuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SudokuCell.swift; sourceTree = "<group>"; };
+		EB79D4951B0826220006E0A1 /* Sudoku3x3Cells.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sudoku3x3Cells.swift; sourceTree = "<group>"; };
+		EB79D4961B0826220006E0A1 /* Sudoku9x9Cells.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sudoku9x9Cells.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +83,9 @@
 		EB1A893A1B0824760040C20B /* SudokuSolver */ = {
 			isa = PBXGroup;
 			children = (
+				EB79D4951B0826220006E0A1 /* Sudoku3x3Cells.swift */,
+				EB79D4961B0826220006E0A1 /* Sudoku9x9Cells.swift */,
+				EB79D4931B08260A0006E0A1 /* SudokuCell.swift */,
 				EB1A893D1B0824760040C20B /* AppDelegate.swift */,
 				EB1A893F1B0824760040C20B /* ViewController.swift */,
 				EB1A89411B0824760040C20B /* Document.swift */,
@@ -156,7 +165,9 @@
 		EB1A89301B0824760040C20B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0630;
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Takayoshi Hongan";
 				TargetAttributes = {
 					EB1A89371B0824760040C20B = {
@@ -169,7 +180,7 @@
 				};
 			};
 			buildConfigurationList = EB1A89331B0824760040C20B /* Build configuration list for PBXProject "SudokuSolver" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 6.3";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -213,6 +224,9 @@
 			files = (
 				EB1A89401B0824760040C20B /* ViewController.swift in Sources */,
 				EB1A893E1B0824760040C20B /* AppDelegate.swift in Sources */,
+				EB79D4941B08260A0006E0A1 /* SudokuCell.swift in Sources */,
+				EB79D4981B0826220006E0A1 /* Sudoku9x9Cells.swift in Sources */,
+				EB79D4971B0826220006E0A1 /* Sudoku3x3Cells.swift in Sources */,
 				EB1A89421B0824760040C20B /* Document.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,6 +282,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -334,7 +349,10 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = SudokuSolver/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.takhongan.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = macosx;
 			};
 			name = Debug;
 		};
@@ -345,7 +363,10 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = SudokuSolver/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.takhongan.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = macosx;
 			};
 			name = Release;
 		};
@@ -364,6 +385,7 @@
 				);
 				INFOPLIST_FILE = SudokuSolverTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "takhongan.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SudokuSolver.app/Contents/MacOS/SudokuSolver";
 			};
@@ -380,6 +402,7 @@
 				);
 				INFOPLIST_FILE = SudokuSolverTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "takhongan.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SudokuSolver.app/Contents/MacOS/SudokuSolver";
 			};
@@ -404,6 +427,7 @@
 				EB1A89581B0824770040C20B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EB1A89591B0824770040C20B /* Build configuration list for PBXNativeTarget "SudokuSolverTests" */ = {
 			isa = XCConfigurationList;
@@ -412,6 +436,7 @@
 				EB1A895B1B0824770040C20B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
