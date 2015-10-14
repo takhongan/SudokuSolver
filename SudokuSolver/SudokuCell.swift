@@ -5,8 +5,8 @@
 //  Created by Takayoshi Hongan on 5/17/15.
 //  Copyright (c) 2015 Takayoshi Hongan. All rights reserved.
 //
-//  GNU LESSER GENERAL PUBLIC LICENSE Version 3
-//  http://www.gnu.org/licenses/lgpl-3.0.en.html
+//  The MIT License (MIT)
+//  https://opensource.org/licenses/MIT
 
 import Cocoa
 
